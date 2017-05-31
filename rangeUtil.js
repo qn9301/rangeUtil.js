@@ -102,7 +102,7 @@ function rangeUtil(option){
 				deal_event(e)
 			}
 		})
-		$("body").on("mouseup touchend", function (e){
+		$(document).on("mouseup touchend", function (e){
 			_.emitCallback({point: _.point})
 			moveState = false;
 		})
