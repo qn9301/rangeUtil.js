@@ -11,15 +11,23 @@
 	</style>
 </head>
 <body>
-	<div style="height: 250px;width: 70px;"></div>
 	<script>
-		var obj = new rangeUtil({
-			father_box: $("div"),
-			defaultValue: 50
-		});
-		obj.registCallback(function (data){
-			console.log(data);
-		})
+
+        var changeScale = $("<div style='height:40px;width:250px;display: inline-block' />");
+        $("body").append(changeScale);
+        range = new rangeUtil({father_box: changeScale,
+        	rangebox_css: {
+				position: 'absolute',
+				top:'40px',
+				width: '10px',
+				height: '10px',
+				'border-radius': '50%',
+				'background-color': '#f2f2f2',
+				'box-shadow': '2px 2px 2px rgba(0,0,0,.2)'
+			},
+        	type:2}).registCallback(function (data){
+
+        })
 	</script>
 </body>
 </html>

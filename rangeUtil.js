@@ -103,6 +103,9 @@ function rangeUtil(option){
 			}
 		})
 		$(document).on("mouseup touchend", function (e){
+			if (moveState === false){
+				return;
+			}
 			_.emitCallback({point: _.point})
 			moveState = false;
 		})
@@ -128,19 +131,19 @@ function rangeUtil(option){
 		if (!$.isNumeric(val)){
 			return false;
 		}
-		if (val > this.max){
-			val = this.max
+		if (val > this.option.max){
+			val = this.option.max
 		}
-		if (val < this.min){
-			val = this.min
+		if (val < this.option.min){
+			val = this.option.min
 		}
 		util._setPointer(this.rangebox, this.range, 
-			(val - this.min) / (this.max - this.min), this.option.type);
+			(val - this.option.min) / (this.option.max - this.option.min) * 100, this.option.type);
 		return this;
 	}
 
 	proto.getVal = function (){
-		return this.point * (this.max - this.min) + this.min;
+		return this.point * (this.option.max - this.option.min) + this.option.min;
 	}
 
 	proto.registCallback = function (call){
