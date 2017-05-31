@@ -47,4 +47,4 @@ range.registCallback(function (data){
 })
 ```
 ### 效果图
-![image](https://raw.githubusercontent.com/qn9301/rangeUtil/master/image/I%5BG2%7DQ)%7D8K2A%7DOT%242PCP%407R.png)
+![image](https://raw.githubusercontent.com/qn9301/rangeUtil/master/image/I%5BG2%7DQ\)%7D8K2A%7DOT%242PCP%407R.png)
