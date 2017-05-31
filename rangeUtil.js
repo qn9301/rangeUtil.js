@@ -135,15 +135,17 @@ function rangeUtil(option){
 			val = this.min
 		}
 		util._setPointer(this.rangebox, this.range, 
-			val, this.option.type);
+			(val - this.min) / (this.max - this.min), this.option.type);
+		return this;
 	}
 
 	proto.getVal = function (){
-		return this.point;
+		return this.point * (this.max - this.min) + this.min;
 	}
 
 	proto.registCallback = function (call){
 		this.func_list.push(call)
+		return this;
 	}
 
 	// 初始化一切
