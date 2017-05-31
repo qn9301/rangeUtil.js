@@ -27,13 +27,13 @@ var range = new rangeUtil({
 ### 得到值
 
 ```
-range.getVal(); // 返回目前的百分比，可以修改插件返回相应的值
+range.getVal(); 
 ```
 
 ### 设置值
 
 ```
-range.setVal(); // 返回目前的百分比，可以修改插件返回相应的值
+range.setVal();
 ```
 
 ### 注册回调事件
